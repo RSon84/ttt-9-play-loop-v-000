@@ -45,7 +45,7 @@ end
 
 def play(board)
   turn(board)
-  until display_board(board) == display_board_full(board)
+  until board == ["X"||"O", "X"||"O", "X"||"O", "X"||"O", "X"||"O", "X"||"O", "X"||"O", "X"||"O", "X"||"O"]
     turn(board)
   end
 end
