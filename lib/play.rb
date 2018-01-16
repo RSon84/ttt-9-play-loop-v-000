@@ -7,6 +7,14 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+def display_board_full(board)
+  puts " #{"X"||"O"} | #{"X"||"O"} | #{"X"||"O"} "
+  puts "-----------"
+  puts " #{"X"||"O"} | #{"X"||"O"} | #{"X"||"O"} "
+  puts "-----------"
+  puts " #{"X"||"O"} | #{"X"||"O"} | #{"X"||"O"} "
+end
+
 def input_to_index(user_input)
   user_input.to_i - 1
 end
@@ -35,4 +43,8 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  turn(board)
+  until display_board(board) == display_board_full(board)
+  end
+end
