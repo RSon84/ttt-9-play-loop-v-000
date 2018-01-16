@@ -44,7 +44,7 @@ def turn(board)
 end
 
 def play(board)
-  turn(board)
   until display_board(board) == display_board_full(board)
+    turn(board)
   end
 end
